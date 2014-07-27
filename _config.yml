@@ -4,9 +4,10 @@ destination:        ../mistermark.github.com
 layouts:            ./_app/_layouts
 sass:
   sass_dir:         _sass
+  style:            :compressed
 
-markdown: kramdown
-permalink: pretty
+markdown:           kramdown
+permalink:          pretty
 
 navigation:
   - title: About
