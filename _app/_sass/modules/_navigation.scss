@@ -9,12 +9,11 @@
   ul {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    @include align-items(center);
     list-style: none;
-    align-items: center;
-
   }
   li {
     &:not(.avatar){
@@ -35,9 +34,9 @@
     font-size: $base-font-size * 0.5;
     font-weight: normal;
     text-decoration: none;
-    display: flex;
+    @include display(flex);
+    @include align-items(flex-start);
     color: lighten(#000, 35%);
-    align-items: flex-start;
     line-height: $base-font-size * 2.2;
     &:hover, &:focus {
       color: black;
