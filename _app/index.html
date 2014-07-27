@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+
+  {% for page in paginator.posts %}
+
+      <article class="post{% for category in page.categories %} category-{{page.categories}}{% endfor %}">
+          <header class="post-header">
+              <h2 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+          </header>
+          <div class="post-meta">
+            {% include post-timestamp.html %}
+          </div>
+          <section class="post-excerpt">
+              {{ page.excerpt }}
+          </section>
+          <div class="post-meta">
+            {% include post-tags.html %}
+          </div>
+      </article>
+
+  {% endfor %}
+
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    <div class="newer-posts pagination--nav">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span>Previous</span></a>
+    {% endif %}
+    </div>
+
+    <div class="older-posts pagination--nav">
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span>Next</span></a>
+    {% endif %}
+    </div>
+  </div>
+  {% endif %}
