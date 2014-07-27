@@ -33,7 +33,7 @@ navigation:
 layouts: ./_app/_layouts
 # excerpt_separator: "\n\n"
 source: ./_app
-destination: ../mistermark.github.com/_site
+destination: ../mistermark.github.com/
 collections:
   links:
     category: links
