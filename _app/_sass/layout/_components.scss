@@ -1,0 +1,27 @@
+.inline-list {
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+    }
+}
+
+.inline-icons {
+  li {
+    margin: 0 1em;
+    @include box-shadow(0, 0, 0, 3px, $base-accent-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: $base-font-size * 1;
+    line-height: $base-font-size * 1.3;
+    a {
+      span {
+        display: none;
+      }
+      &:before {
+        font-family: "Icomoon Set";
+      }
+    }
+  }
+}

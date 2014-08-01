@@ -15,11 +15,13 @@ section.author {
   h4 {
     color: rgb(51, 51, 51);
     margin: 0;
+    padding-bottom: 0.15em;
     padding-top: 0;
   }
   .author-title {
-    font-style: italic;
-    margin: 0;
+    font-size: 0.9em;
+    margin: 0 0 0.8em;
+    line-height: 1.6em;
   }
   .author-bio {
     padding: 0.5em 0;

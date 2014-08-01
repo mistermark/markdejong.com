@@ -1,0 +1,27 @@
+ul.social {
+  @extend .inline-list;
+  @extend .inline-icons;
+  li {
+    margin: 0 0.6em 0 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    box-shadow: none;
+    font-size: $base-font-size * 0.90;
+    line-height: 1.2em;
+    a {
+      &.social__facebook:before {
+        content: "\e612";
+      }
+      &.social__twitter:before {
+        content: "\e613";
+      }
+      &.social__flickr:before {
+        content: "\e614";
+      }
+      &.social__github:before {
+        content: "\e615";
+      }
+    }
+  }
+}

@@ -16,3 +16,7 @@ So that's what I'm doing here on this part of the web that I call my own. Share 
 Apart from these thought sharing, opinion publishing, content creating activities I'm also making the web a prettier place to look at. As my alter ego "[Dapper & some](http://www.dappersome.com)" I provide web services like web design, basic web hosting and website development for small to medium sized businesses.
 
 That basically wraps up the basic idea of why I created this website in the first place and it'll give you an idea what keeps me busy on a daily basis. So keep reading if it interests you and if it does not, share it to your friends to bother them with it. Either way it's going to be a win for me.
+
+##### Author's info:
+
+{% include post-author.html %}

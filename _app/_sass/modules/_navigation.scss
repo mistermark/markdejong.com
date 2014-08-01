@@ -36,7 +36,7 @@
     text-decoration: none;
     @include display(flex);
     @include align-items(flex-start);
-    color: lighten(#000, 35%);
+    color: darken($greyed-out, 30%);
     line-height: $base-font-size * 2.2;
     &:hover, &:focus {
       color: black;
