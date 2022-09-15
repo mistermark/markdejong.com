@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
+
+$baseFontSize: 24px;
+$baseFontFamily: 'Overpass', serif;
+
+$colorLegoBlack: #05131D;
+
+$legoHeadHeight: 6.25em;
+$legoHeadWidth: 7.25em;
+$legoHeadStudHeight: 1.25em;
+$legoHeadNeckHeight: 1em;
+
+html {
+  box-sizing: border-box;
+  font-size: $baseFontSize;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(0deg, 
+  lighten(#61AFFF, 14%) 0 1%,
+  lighten(#61AFFF, 18%) 1% 2%,
+  lighten(#61AFFF, 22%) 2% 3%,
+  lighten(#61AFFF, 26%) 3% 4%,
+  lighten(#61AFFF, 30%) 4% 5%,
+  white 5% 5%,
+  transparent);
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    180deg, 
+    lighten(#61AFFF, 14%) 0 1%,
+    lighten(#61AFFF, 18%) 1% 2%,
+    lighten(#61AFFF, 22%) 2% 3%,
+    lighten(#61AFFF, 26%) 3% 4%,
+    lighten(#61AFFF, 30%) 4% 5%,
+    white 5% 5%,
+    transparent
+  );
+}
+h1 {
+  font-size: 5em;
+  font-family: $baseFontFamily;
+  font-weight: 700;
+  color: $colorLegoBlack;
+  padding: 2rem 0;
+  // word-spacing: 1.4rem;
+  text-shadow: 
+    // 0 6px 1px rgba(0,0,0,.1),
+    // 0 0 5px rgba(0,0,0,.1),
+    // 1px 1px 3px rgba(0,0,0,.3),
+    // 3px 3px 5px rgba(0,0,0,.2),
+    // 5px 5px 10px rgba(0,0,0,.25),
+    1px 1px 0 #A0A5A9, 
+    2px 2px 0 #A0A5A9,
+    3px 3px 0 #A0A5A9,
+    4px 4px 0 #A0A5A9,
+    5px 5px 0 #A0A5A9,
+    // 5px 5px 10px rgba(0,0,0,.2),
+    // 10px 10px 20px rgba(0,0,0,.15),
+    ;
+}
+
+.minifigure {
+  position: relative;
+  width: $legoHeadWidth + (9 * 2em);
+  height: calc($legoHeadHeight + $legoHeadStudHeight + $legoHeadNeckHeight);
+  filter: 
+    drop-shadow(2em 0 0 #61AFFF)
+    drop-shadow(2em 0 0 lighten(#61AFFF, 10%))
+    drop-shadow(2em 0 0 lighten(#61AFFF, 13%))
+    drop-shadow(2em 0 0 lighten(#61AFFF, 16%))
+    drop-shadow(2em 0 0 lighten(#61AFFF, 19%))
+    drop-shadow(2em 0 0 lighten(#61AFFF, 21%))
+    drop-shadow(2em 0 0 lighten(#61AFFF, 24%))
+    drop-shadow(2em 0 0 lighten(#61AFFF, 27%))
+    drop-shadow(2em 0 0 lighten(#61AFFF, 30%))
+  ;
+}
+
+.head {
+  position: relative;
+  // z-index: 1;
+  margin-top: $legoHeadStudHeight;
+  margin-bottom: $legoHeadNeckHeight;
+  // left: 50%;
+  width: 7.25em;
+  height: 6.25em;
+  // transform: translateX(-50%);
+  color: hsla(50, 90%, 50%, 1);
+  background-color: currentColor;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 0.15) 95%,
+      rgba(0, 0, 0, 0.3)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+  border-radius: 1.5em;
+}
+.head::before,
+.head::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+
+.head::before {
+  top: -1.25em;
+  width: 3.5em;
+  height: 1.25em;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0) 30%
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 0.25) 80%,
+      rgba(255, 255, 255, 0) 90%
+    );
+  border-radius: 0.25em 0.25em 0 0;
+}
+
+.head::after {
+  bottom: -1em;
+  width: 4.5em;
+  height: $legoHeadNeckHeight;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05) 50%),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 0.25) 80%,
+      rgba(255, 255, 255, 0) 90%
+    );
+  border-radius: 0 0 0.125em 0.125em;
+}
+
+/* Faces */
+
+.faces-wrap {
+  height: 100%;
+  overflow: hidden;
+}
+
+.faces {
+  display: flex;
+}
+
+.face {
+  position: relative;
+  flex: 1 0 100%;
+}
+
+/* Eyes */
+
+.eye {
+  position: absolute;
+  top: 2.25em;
+  width: 0.75em;
+  height: 0.9375em;
+  color: #fff;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: inset 0 -0.125em 0 0.25em #000;
+}
+
+.eye::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  color: #000;
+  transform: translateX(-50%);
+}
+
+.eye.right {
+  left: 2.25em;
+}
+
+.eye.left {
+  right: 2.25em;
+}
+
+.large-smile .eye {
+  top: 2em;
+}
+
+/* Brow */
+
+.brow {
+  position: absolute;
+  bottom: 0.625em;
+  left: 50%;
+  width: 1.75em;
+  height: 1em;
+  transform-origin: 0 0;
+  transform: translateX(-50%);
+  color: #000;
+  border: 0.25em solid transparent;
+  border-top-color: currentColor;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+}
+
+.right .brow {
+  border-left: none;
+}
+
+.left .brow {
+  border-right: none;
+}
+
+.large-smile .brow {
+  bottom: 0.375em;
+  width: 1.25em;
+  height: 1.375em;
+  border: none;
+  border-top: 0.25em solid;
+  border-radius: 50% 50% 0 0;
+}
+
+.large-smile .right .brow {
+  margin-left: -0.125em;
+  transform: skewY(-10deg) translateX(-50%) translateZ(0);
+}
+
+.large-smile .left .brow {
+  margin-left: 0.125em;
+  transform: skewY(10deg) translateX(-50%) translateZ(0);
+}
+
+/* Mouth */
+
+.mouth {
+  position: absolute;
+  top: 3.125em;
+  left: 50%;
+  width: 2.5em;
+  height: 1.5em;
+  transform: translateX(-50%);
+  color: #000;
+  border: 0.25em solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+}
+
+.mouth::before,
+.mouth::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.classic .mouth {
+  top: 2.9375em;
+}
+
+.large-smile .mouth {
+  top: 0.125em;
+  width: 3.125em;
+  height: 5em;
+  border: none;
+  border-bottom: 1.5em solid;
+  border-radius: 0 0 70% 70%/0 0 50% 50%;
+}
+
+.large-smile .mouth::before {
+  top: 1.6875em;
+  width: 4.25em;
+  height: 2em;
+  color: #000;
+  border: 0.1875em solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0 0.9375em 0 -0.75em #fff;
+}
+
+.large-smile .mouth::after {
+  top: 4.4375em;
+  width: 1.25em;
+  height: 0.375em;
+  color: #c00;
+  background-color: currentColor;
+  border-radius: 70% 70% 70% 70%/50% 50% 100% 100%;
+}
