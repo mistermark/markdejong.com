@@ -24,14 +24,7 @@ html {
 }
 
 body {
-  background: linear-gradient(0deg, 
-  lighten(#61AFFF, 14%) 0 1%,
-  lighten(#61AFFF, 18%) 1% 2%,
-  lighten(#61AFFF, 22%) 2% 3%,
-  lighten(#61AFFF, 26%) 3% 4%,
-  lighten(#61AFFF, 30%) 4% 5%,
-  white 5% 5%,
-  transparent);
+  background: #fff
 }
 
 .main {
@@ -41,16 +34,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    180deg, 
-    lighten(#61AFFF, 14%) 0 1%,
-    lighten(#61AFFF, 18%) 1% 2%,
-    lighten(#61AFFF, 22%) 2% 3%,
-    lighten(#61AFFF, 26%) 3% 4%,
-    lighten(#61AFFF, 30%) 4% 5%,
-    white 5% 5%,
-    transparent
-  );
 }
 h1 {
   font-size: 5em;
@@ -58,20 +41,12 @@ h1 {
   font-weight: 700;
   color: $colorLegoBlack;
   padding: 2rem 0;
-  // word-spacing: 1.4rem;
   text-shadow: 
-    // 0 6px 1px rgba(0,0,0,.1),
-    // 0 0 5px rgba(0,0,0,.1),
-    // 1px 1px 3px rgba(0,0,0,.3),
-    // 3px 3px 5px rgba(0,0,0,.2),
-    // 5px 5px 10px rgba(0,0,0,.25),
     1px 1px 0 #A0A5A9, 
     2px 2px 0 #A0A5A9,
     3px 3px 0 #A0A5A9,
     4px 4px 0 #A0A5A9,
     5px 5px 0 #A0A5A9,
-    // 5px 5px 10px rgba(0,0,0,.2),
-    // 10px 10px 20px rgba(0,0,0,.15),
     ;
 }
 
@@ -94,13 +69,10 @@ h1 {
 
 .head {
   position: relative;
-  // z-index: 1;
   margin-top: $legoHeadStudHeight;
   margin-bottom: $legoHeadNeckHeight;
-  // left: 50%;
   width: 7.25em;
   height: 6.25em;
-  // transform: translateX(-50%);
   color: hsla(50, 90%, 50%, 1);
   background-color: currentColor;
   background-image: linear-gradient(

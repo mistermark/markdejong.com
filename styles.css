@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: linear-gradient(0deg, #a8d3ff 0 1%, #bdddff 1% 2%, #d1e8ff 2% 3%, #e6f2ff 3% 4%, #fafcff 4% 5%, white 5% 5%, transparent);
+  background: #fff;
 }
 
 .main {
@@ -23,7 +23,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #a8d3ff 0 1%, #bdddff 1% 2%, #d1e8ff 2% 3%, #e6f2ff 3% 4%, #fafcff 4% 5%, white 5% 5%, transparent);
 }
 
 h1 {
